@@ -74,7 +74,13 @@ export default function Home() {
                                             ? BeingFoody_items.filter((item) => item.CategoryName === data.CategoryName && (item.name.toLocaleLowerCase().includes(Search.toLocaleLowerCase()))).map((filterItems) => {
                                                 return (
                                                     <>
-                                                        <div key={filterItems._id} className='col-12 col-md-6 col-lg-3'><Card foodName={filterItems.name} options={filterItems.options[0]} imgSrc={filterItems.img} /></div>
+                                                        <div key={filterItems._id} className='col-12 col-md-6 col-lg-3'>
+
+                                                            {/* <Card foodName={filterItems.name} options={filterItems.options[0]} imgSrc={filterItems.img} /> */}
+
+                                                            <Card foodItems={filterItems}
+                                                            options={filterItems.options[0]}></Card>
+                                                            </div>
                                                     </>
                                                 )
                                             }) : <div>No such data found</div>
