@@ -1,8 +1,16 @@
 const express = require('express')
+const cors=require('cors');
 const app = express()
 const port = 5000
 const connectToMongoDB = require('./db')
 connectToMongoDB();
+app.use(cors(
+    {
+        origin: ["https://being-foody-az1k.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+))
 app.use((req,res,next)=>{
     res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
     res.header(
