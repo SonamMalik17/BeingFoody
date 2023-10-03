@@ -18,10 +18,10 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route exact path='https://being-foody-backend.vercel.app/' element={<Home />} />
-          <Route exact path='https://being-foody-backend.vercel.app/login' element={<Login />} />
-          <Route exact path='https://being-foody-backend.vercel.app/createuser' element={<Signup />} />
-          <Route exact path='https://being-foody-backend.vercel.app/myorder' element={<MyOrder />} />
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/createuser' element={<Signup />} />
+          <Route exact path='/myorder' element={<MyOrder />} />
         </Routes>
       </div>
     </Router>
