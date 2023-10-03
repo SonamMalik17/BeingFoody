@@ -6,7 +6,7 @@ const connectToMongoDB = require('./db')
 connectToMongoDB();
 app.use(cors(
     {
-        origin: ["https://being-foody-az1k.vercel.app/"],
+        origin: ["https://being-foody-frontend.vercel.app/"],
         methods: ["POST", "GET"],
         credentials: true
     }
